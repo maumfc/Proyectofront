@@ -8,15 +8,15 @@ const ContactInfo = () => {
       <h2>Contact Information</h2>
       <div className="info-item">
         <h3>Address:</h3>
-        <p>123 Main St, City, Country</p>
+        <p>123 calle ross, Santa Ana, San jose</p>
       </div>
       <div className="info-item">
         <h3>Phone:</h3>
-        <p>+1 234 567 890</p>
+        <p>+506 64453107</p>
       </div>
       <div className="info-item">
         <h3>Email:</h3>
-        <p>info@example.com</p>
+        <p>maurenmfc@gmail.com</p>
       </div>
       <div className="info-item">
         <h3>Working Hours:</h3>
@@ -30,7 +30,7 @@ const ContactInfo = () => {
           height="300"
           frameBorder="0"
           style={{ border: 0 }}
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1234.5678!2d-73.987654!3d40.748817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef0!2sEmpresa%20XYZ!5e0!3m2!1sen!2sus!4v1624859278368!5m2!1sen!2sus"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d584.1961916027353!2d-84.19700605455104!3d9.934967075346986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scr!4v1719603727970!5m2!1ses-419!2scr"
           allowFullScreen
         ></iframe>
       </div>

@@ -6,18 +6,18 @@ import About from './pages/about';
 import Login from './pages/login';
 import Productos from './pages/productos';
 import Navbar from './componentes/commons/navbar';
-//import { AuthProvider, AuthContext } from './hooks/auth-context';
+import { AuthProvider, AuthContext } from './hooks/auth-context';
  
 const ProtectedRoute = ({ element }) => {
-  const  isLoggedIn  = true; //useContext(AuthContext);
+  const  isLoggedIn  = useContext(AuthContext);
   return isLoggedIn ? element : <Navigate to="/login" />;
 };
 
 const App = () => {
-  // const { isLoggedIn, logout } = useContext(AuthContext);
+   const { isLoggedIn, logout } = useContext(AuthContext);
 
   return (
-    // <AuthProvider>
+     <AuthProvider>
       <Router>
         <div>
         <Navbar />
@@ -32,7 +32,7 @@ const App = () => {
           </Routes>
         </div>
       </Router>
-    // </AuthProvider>
+     </AuthProvider>
   );
 };
 
