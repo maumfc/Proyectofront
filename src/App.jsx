@@ -14,11 +14,11 @@ const ProtectedRoute = ({ element }) => {
 };
 
 const App = () => {
-   const { isLoggedIn, logout } = useContext(AuthContext);
+
 
   return (
-     <AuthProvider>
       <Router>
+     <AuthProvider>
         <div>
         <Navbar />
 
@@ -31,8 +31,8 @@ const App = () => {
             <Route path="/productos" element={<ProtectedRoute element={<Productos />} />} />
           </Routes>
         </div>
-      </Router>
      </AuthProvider>
+      </Router>
   );
 };
 
