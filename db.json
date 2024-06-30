@@ -4,39 +4,39 @@
             "id": 1,
             "nombre": "Producto 1",
             "descripcion": "Descripción del Producto 1",
-            "imagen": "https://via.placeholder.com/150"
+            "imagen": "https://m.media-amazon.com/images/I/513EKR4wdbL._AC_UY1000_.jpg"
         },
         {
             "id": 2,
             "nombre": "Producto 2",
             "descripcion": "Descripción del Producto 2",
-            "imagen": "https://via.placeholder.com/150"
+            "imagen": "https://ss571.liverpool.com.mx/xl/1106298145.jpg"
         },
         {
             "id": 3,
             "nombre": "Producto 3",
             "descripcion": "Descripción del Producto 3",
-            "imagen": "https://via.placeholder.com/150"
+            "imagen": "https://m.media-amazon.com/images/I/51SgjYTsZTL._AC_SX679_.jpg"
         },
         {
             "id": 4,
             "nombre": "Producto 4",
             "descripcion": "Descripción del Producto 4",
-            "imagen": "https://via.placeholder.com/150"
+            "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_652023-MLM44397204330_122020-F.webp"
+        },
+        {
+            "id": 5,
+            "nombre": "Producto 5",
+            "descripcion": "Descripción del Producto 5",
+            "imagen": "https://relojesjool.com/cdn/shop/files/5a9b73fd7a6f4e4591104ec5a2186ac0_01022024112617_1024x1024@2x.jpg"
         }
     ],
     "users": [
         {
             "id": 1,
-            "username": "user1",
+            "username": "advo",
             "email": "user1@example.com",
             "password": "password1"
-        },
-        {
-            "id": 2,
-            "username": "user2",
-            "email": "user2@example.com",
-            "password": "password2"
         }
     ]
 }

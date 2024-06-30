@@ -1,9 +1,10 @@
 import React from 'react'
+import Homec from '../componentes/contenedores/Home/home'
 
 const Home = () => {
   return (
     <div>
-      <h1>estoy en Home</h1>
+      <Homec />
     </div>
   )
 }

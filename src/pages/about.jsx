@@ -1,9 +1,10 @@
 import React from 'react'
+import Description from '../componentes/contenedores/Description/Description'
 
 const About = () => {
   return (
     <div>
-        <h1>estohy en about</h1>
+      <Description />
     </div>
   )
 }
