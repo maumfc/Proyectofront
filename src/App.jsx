@@ -7,6 +7,7 @@ import Login from './pages/login';
 import Productos from './pages/productos';
 import Navbar from './componentes/commons/navbar';
 import { AuthProvider, AuthContext } from './hooks/auth-context';
+import ProductoForm from './componentes/contenedores/agregar-productos/guardar-productos';
  
 const ProtectedRoute = ({ element }) => {
   const  isLoggedIn  = useContext(AuthContext);
@@ -19,7 +20,7 @@ const App = () => {
   return (
       <Router>
      <AuthProvider>
-        <div>
+       
         <Navbar />
 
           <Routes>
@@ -29,8 +30,9 @@ const App = () => {
             <Route path="/contact" element={<ProtectedRoute element={<Contacto />} />} />
             <Route path="/home" element={<ProtectedRoute element={<Home />} />} />
             <Route path="/productos" element={<ProtectedRoute element={<Productos />} />} />
+            <Route path="/productoform" element={<ProtectedRoute element={<ProductoForm />} />} />
           </Routes>
-        </div>
+       
      </AuthProvider>
       </Router>
   );

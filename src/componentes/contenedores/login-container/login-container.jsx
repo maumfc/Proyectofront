@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './login.css'; // Asegúrate de importar el archivo CSS correctamente
-
+import { AuthContext } from '../../../hooks/auth-context';
 const LoginContainer = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const { login } = useContext(AuthContext)
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí podrías implementar la lógica para iniciar sesión
-  };
-
+  
   return (
     <div className="login-form-container">
       <div className="login-form">
         <h2>Inicio de Sesión</h2>
-        <form onSubmit={handleSubmit}>
+        <form >
           <label>
             Usuario:
             <input
@@ -35,7 +32,7 @@ const LoginContainer = () => {
               required
             />
           </label>
-          <button type="submit" className="login-form-button">Iniciar Sesión</button>
+          <button type="button" className="login-form-button" onClick={() => { login(username, password) }}>Iniciar Sesión</button>
         </form>
       </div>
     </div>
