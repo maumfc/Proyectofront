@@ -1,6 +1,7 @@
-/* src/components/Navbar.css */
 .navbar {
-    background-color: #333;
+    background-image: url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDEwNDU2ZzZ0MGQzZXg5b3hhZjFvMDh6dW1uZ3lhdHY0NWljdnVxeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2PwxrzxW6JseU8/giphy.gif);
+    background-size: 900% 100%;
+    background-repeat: no-repeat;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }

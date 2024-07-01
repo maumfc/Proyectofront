@@ -6,11 +6,11 @@
     font-family: Arial, sans-serif;
   }
   
-  .header {
-    background-color: #333;
-    color: white;
+  .header-o {
+    background-color: transparent;
+    color: rgb(52, 26, 223);
     padding: 20px;
-  }
+  } 
   
   .header h1 {
     margin: 0;
@@ -42,7 +42,7 @@
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(117, 102, 102, 0.1);
   }
   
   .product-item img {
@@ -62,12 +62,12 @@
   }
   
   .about-us {
-    margin-top: 40px;
+    margin-top: 1px;
   }
   
   .about-us h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 1px;
+    margin-bottom: 1px;
   }
   
   .footer {
