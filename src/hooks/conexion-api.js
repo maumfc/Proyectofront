@@ -14,9 +14,44 @@ export const ConexionApi = () => {
             throw error; 
         }
     }
-
-
     async function loginApi(username, password) {
+        try {
+            const response = await fetch(`http://localhost:5000/users?username=${username}&password=${password}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+    
+            const users = await response.json();
+            return users.length > 0;
+        } catch (error) {
+            console.log("Error en la conexión con la API:", error);
+            throw error;
+        }
+    }
+
+    async function addProduct(product) {
+        try {
+            const response = await fetch("http://localhost:5000/products", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(product)
+            });
+
+            if (!response.ok) {
+                throw new Error("error");
+            }
+
+            const newProduct = await response.json();
+            return newProduct;
+        } catch (error) {
+            console.log("Error al agregar el producto:", error);
+            throw error;
+        }
+    }
+
+    async function registro(username, password) {
         try {
             const response = await fetch("http://localhost:5000/users", {
                 method: 'POST',
@@ -42,6 +77,7 @@ export const ConexionApi = () => {
 
     return {
         getProductos,
-        loginApi
+        loginApi,
+        addProduct
     };
 };

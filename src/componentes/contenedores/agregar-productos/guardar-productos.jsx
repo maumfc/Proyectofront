@@ -2,10 +2,10 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './guardar-productos.css'
-
+import { useGuardarProductos } from './use-guardar-productos';
 
 const ProductoForm = () => {
-    // Define las validaciones del formulario usando Yup
+    const { handleSubmit } = useGuardarProductos()
     const validationSchema = Yup.object().shape({
         imagen: Yup.string().required('La imagen es requerida'),
         descripcion: Yup.string().required('La descripción es requerida'),
@@ -21,12 +21,12 @@ const ProductoForm = () => {
     };
 
     const onSubmit = (values, { resetForm }) => {
-        // Aquí podrías enviar los datos a un servidor o realizar otras acciones
-        useGuardarProductos(values); // Llama a tu función para guardar productos
+        handleSubmit(values);
         resetForm();
     };
 
     return (
+        <div className='product-form-container'>
         <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -60,6 +60,7 @@ const ProductoForm = () => {
                 </Form>
             )}
         </Formik>
+        </div>
     );
 };
 

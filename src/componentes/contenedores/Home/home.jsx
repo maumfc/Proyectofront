@@ -5,7 +5,7 @@ const Homec = () => {
   return (
     <div className="home">
       <header className="header">
-        <h1>Bienvenido a [Nombre de la Tienda]</h1>
+        <h1>Bienvenido a Vínculo Encantado</h1>
         <p>Descubre la elegancia en cada detalle.</p>
       </header>
       <section className="featured-products">
@@ -30,10 +30,10 @@ const Homec = () => {
       </section>
       <section className="about-us">
         <h2>Acerca de Nosotros</h2>
-        <p>En [Nombre de la Tienda], nos especializamos en crear pulseras que no solo son accesorios, sino expresiones de tu estilo personal. Nuestro compromiso con la calidad y el diseño nos distingue, ofreciendo piezas únicas que complementan tu vida cotidiana con elegancia y sofisticación.</p>
+        <p>En Vínculo Encantado, nos especializamos en crear pulseras que no solo son accesorios, sino expresiones de tu estilo personal. Nuestro compromiso con la calidad y el diseño nos distingue, ofreciendo piezas únicas que complementan tu vida cotidiana con elegancia y sofisticación.</p>
       </section>
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} [Nombre de la Tienda]. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Vínculo Encantado. Todos los derechos reservados.</p>
       </footer>
     </div>
   );

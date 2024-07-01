@@ -1,7 +1,17 @@
-const useGuardarProductos = (producto) => {
-    // Aquí puedes implementar lógica para guardar el producto
-    console.log('Guardando producto:', producto);
-    // Puedes realizar llamadas a API, almacenamiento en base de datos, etc.
-};
+import { useNavigate } from 'react-router-dom';
+import { ConexionApi } from '../../../hooks/conexion-api';
 
-export default useGuardarProductos;
+export function useGuardarProductos() {
+    const navigate = useNavigate();
+    const { addProduct } = ConexionApi();
+
+    function handleSubmit(producto) {
+        console.log(producto)
+        addProduct(producto)
+        navigate('/productos')
+    }
+
+    return {
+        handleSubmit
+    }
+};

@@ -1,39 +1,46 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Producto 1",
       "descripcion": "Descripción del Producto 1",
       "imagen": "https://m.media-amazon.com/images/I/513EKR4wdbL._AC_UY1000_.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Producto 2",
       "descripcion": "Descripción del Producto 2",
       "imagen": "https://ss571.liverpool.com.mx/xl/1106298145.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Producto 3",
       "descripcion": "Descripción del Producto 3",
       "imagen": "https://m.media-amazon.com/images/I/51SgjYTsZTL._AC_SX679_.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Producto 4",
       "descripcion": "Descripción del Producto 4",
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_652023-MLM44397204330_122020-F.webp"
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "Producto 5",
       "descripcion": "Descripción del Producto 5",
       "imagen": "https://relojesjool.com/cdn/shop/files/5a9b73fd7a6f4e4591104ec5a2186ac0_01022024112617_1024x1024@2x.jpg"
+    },
+    {
+      "id": "deef",
+      "nombre": "advo",
+      "imagen": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTl1OXhkbWk4ZTB2czluMG1md2p2czR0aDN6dWZqemVvZmY1NWY5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uWPnq3Gtjmf5iN9cWh/giphy.gif",
+      "descripcion": "agradable",
+      "precio": 50000
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "sofi",
       "email": "sofi.sfc@example.com",
       "password": "sofi2015"
@@ -45,6 +52,81 @@
     },
     {
       "id": "c712",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "a6e0",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "166c",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "cccf",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "5320",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "db37",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "0032",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "7965",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "c75b",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "28c8",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "9738",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "ced6",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "e1a4",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "32a3",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "93bd",
+      "username": "sofi",
+      "password": "sofi2015"
+    },
+    {
+      "id": "ed26",
       "username": "sofi",
       "password": "sofi2015"
     }
