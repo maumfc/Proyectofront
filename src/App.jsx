@@ -8,6 +8,7 @@ import Productos from './pages/productos';
 import Navbar from './componentes/commons/navbar';
 import { AuthProvider, AuthContext } from './hooks/auth-context';
 import ProductoForm from './componentes/contenedores/agregar-productos/guardar-productos';
+import './App.css'
  
 const ProtectedRoute = ({ element }) => {
   const  isLoggedIn  = useContext(AuthContext);
