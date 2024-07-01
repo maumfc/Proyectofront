@@ -7,9 +7,9 @@
   }
   
   .header {
-    background-color: #282c34;
+    background-image: url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDZleXl1YzIwdW41anc0ZXhuMGhnYTU4eDZwZjA1Mjd1eDJzZ2FseiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2YsfcgrlTpNHbLDjYo/giphy.gif);
     padding: 20px;
-    color: white;
+    color: rgb(255, 254, 254);
   }
   
   .section {
@@ -19,11 +19,13 @@
   .section h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: rgb(30, 219, 144);
   }
   
   .section p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
+    color: rgb(215, 231, 228);
   }
   

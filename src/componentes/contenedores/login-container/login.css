@@ -1,15 +1,18 @@
-/* src/LoginForm.css */
 body{
-  background-image: url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXZ5cWtlZ2huN2ZucWV1cjU1dWMzMmh2Z3pzaG93Zng3MTMydjJnaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4qnT0hDxxPbpK/giphy.gif);
+  background-image: url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWd6dDE5cG9qMGtvenBsem1vamtmYWZsdmZvbnk4cmVlZmhrMGgzZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2SpOEIFZkb8X0jhC/giphy.gif);
   background-repeat: no-repeat;
-  background-size: 12 00px 1400px;
+  background-size: 100% 100%;
   background-position: center;
   }
 
 
 
 .login-form-container {
-    display: flex;
+  background-image: url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExemV5ajdzbHRpa3k2eXFtd2M3ZTh5eXJpdThjODBiOHJsMDhuZ2d5OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/w8sTbDQdKD3S3k2QzR/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+  display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -20,7 +23,7 @@ body{
     padding: 20px;
     background-color: #f2f2f2;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(230, 221, 221, 0.1);
   }
   
   .login-form h2 {
@@ -41,7 +44,7 @@ body{
     width: 100%;
     padding: 10px;
     background-color: #4caf50;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 4px;
     cursor: pointer;

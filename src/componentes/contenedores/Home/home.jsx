@@ -4,7 +4,7 @@ import './home.css';
 const Homec = () => {
   return (
     <div className="home">
-      <header className="header">
+      <header className="header-o">
         <h1>Bienvenido a Vínculo Encantado</h1>
         <p>Descubre la elegancia en cada detalle.</p>
       </header>
