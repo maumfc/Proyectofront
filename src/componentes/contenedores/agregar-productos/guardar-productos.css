@@ -38,3 +38,8 @@ button:hover {
     color: red;
     font-size: 14px;
 }
+.product-form-container {
+    margin-right: 150px;
+    margin-top: 50px;
+    margin-left: 150px;
+}

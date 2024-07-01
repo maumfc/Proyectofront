@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
       const userData = await loginApi(username, password);
       console.log(userData);
 
-      if (userData.username === username) {
+      if (userData) {
         setIsLoggedIn(true);
         navigate('/home');
       } else {

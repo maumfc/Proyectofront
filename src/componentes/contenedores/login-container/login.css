@@ -1,4 +1,13 @@
 /* src/LoginForm.css */
+body{
+  background-image: url(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXZ5cWtlZ2huN2ZucWV1cjU1dWMzMmh2Z3pzaG93Zng3MTMydjJnaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4qnT0hDxxPbpK/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: 12 00px 1400px;
+  background-position: center;
+  }
+
+
+
 .login-form-container {
     display: flex;
     justify-content: center;
