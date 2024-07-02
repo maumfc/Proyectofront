@@ -1,6 +1,27 @@
 import React from 'react';
 import './home.css';
 
+const productos = [
+  {
+    id: 1,
+    nombre: 'Pulsera de Plata Elegante',
+    imagen: 'https://m.media-amazon.com/images/I/513EKR4wdbL._AC_SX679_.jpg',
+    precio: '$99.99',
+  },
+  {
+    id: 2,
+    nombre: 'Pulsera de Cuero Minimalista',
+    imagen: 'https://www.ignatius.es/wp-content/uploads/2024/03/pulseras-para-parejas-063gsa.webp',
+    precio: '$49.99',
+  },
+  {
+    id: 3,
+    nombre: 'Pulsera de Perlas Moderna',
+    imagen: 'https://argenteus925.com/cdn/shop/products/IMG_20220210_182415_1597x1597.jpg?v=1644544814',
+    precio: '$79.99',
+  },
+];
+
 const Homec = () => {
   return (
     <div className="home">
@@ -11,21 +32,13 @@ const Homec = () => {
       <section className="featured-products">
         <h2>Productos Destacados</h2>
         <div className="product-grid">
-          <div className="product-item">
-            <img src="/images/product1.jpg" alt="Producto 1" />
-            <h3>Pulsera de Plata Elegante</h3>
-            <p className="price">$99.99</p>
-          </div>
-          <div className="product-item">
-            <img src="/images/product2.jpg" alt="Producto 2" />
-            <h3>Pulsera de Cuero Minimalista</h3>
-            <p className="price">$49.99</p>
-          </div>
-          <div className="product-item">
-            <img src="/images/product3.jpg" alt="Producto 3" />
-            <h3>Pulsera de Perlas Moderna</h3>
-            <p className="price">$79.99</p> 
-          </div>
+          {productos.map((producto) => (
+            <div className="product-item" key={producto.id}>
+              <img src={producto.imagen} alt={producto.nombre} />
+              <h3>{producto.nombre}</h3>
+              <p className="price">{producto.precio}</p>
+            </div>
+          ))}
         </div>
       </section>
       <section className="about-us">
@@ -37,6 +50,6 @@ const Homec = () => {
       </footer>
     </div>
   );
-}
+};
 
 export default Homec;

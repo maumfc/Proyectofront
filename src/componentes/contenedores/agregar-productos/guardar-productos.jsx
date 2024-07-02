@@ -35,6 +35,7 @@ const ProductoForm = () => {
             {({ errors, touched }) => (
                 <Form>
                     <div className="form-control">
+                        <h1>Agregar Productos</h1>
                         <label htmlFor="imagen">Imagen:</label>
                         <Field name="imagen" type="text" />
                         <ErrorMessage name="imagen" component="div" className="error" />
