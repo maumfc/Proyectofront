@@ -1,4 +1,3 @@
-// src/components/ContactInfo.js
 import React from 'react';
 import './contacto.css';
 
