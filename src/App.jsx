@@ -33,6 +33,7 @@ const App = () => {
             <Route path="/home" element={<ProtectedRoute element={<Home />} />} />
             <Route path="/productos" element={<ProtectedRoute element={<Productos />} />} />
             <Route path="/productoform" element={<ProtectedRoute element={<ProductoForm />} />} />
+            <Route path="/edit-product/:id" element={<ProtectedRoute element={<ProductoForm />} />} />
           </Routes>
        
      </AuthProvider>

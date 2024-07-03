@@ -56,3 +56,8 @@
 .delete-button:hover {
   background-color: #c0392b;
 }
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}

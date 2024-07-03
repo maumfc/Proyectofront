@@ -7,6 +7,11 @@ const ProductList = () => {
   const { getProductos } = ConexionApi();
   const [productsData, setProductsData] = useState([]);
   const [error, setError] = useState(null);
+  const [searchInput, setSearchInput] = useState('');
+
+  const handleSearchChange = (event) => {
+    setSearchInput(event.target.value);
+  };
 
   useEffect(() => {
     const fetchProductos = async () => {
@@ -35,6 +40,16 @@ const ProductList = () => {
   };
 
   return (
+    <>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Buscar productos..."
+          value={searchInput}
+          onChange={handleSearchChange}
+        />
+      </div>
+
     <div className="product-list">
       {error ? (
         <p>Error al cargar productos: {error}</p>
@@ -44,9 +59,10 @@ const ProductList = () => {
             key={product.id}
             product={product}
             onDelete={handleDelete} />
-        )) : <div clasName="empty-container"><h1 className=''>No hay productos</h1></div>
+        )) : <div className="empty-container"><h1 className=''>No hay productos</h1></div>
       )}
     </div>
+    </>
   );
 };
 

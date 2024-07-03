@@ -29,6 +29,46 @@ export const ConexionApi = () => {
         }
     }
 
+    async function actualizarProduct(product) {
+        const { id } = product;
+    
+        try {
+            const response = await fetch(`http://localhost:5000/products/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(product)
+            });
+    
+            if (!response.ok) {
+                throw new Error("Error en la actualización");
+            }
+    
+            const updatedProduct = await response.json();
+            return updatedProduct;
+        } catch (error) {
+            console.log("Error al editar el producto:", error);
+            throw error;
+        }
+    }
+
+    async function obtenerProductos(id) {
+        try {
+            const response = await fetch(`http://localhost:5000/products?id=${id}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+    
+            const producto = await response.json();
+            return producto[0]
+        } catch (error) {
+            console.log("Error en la conexión con la API:", error);
+            throw error;
+        }
+    }
+
+
     async function addProduct(product) {
         try {
             const response = await fetch("http://localhost:5000/products", {
@@ -78,6 +118,8 @@ export const ConexionApi = () => {
     return {
         getProductos,
         loginApi,
-        addProduct
+        addProduct,
+        obtenerProductos,
+        actualizarProduct
     };
 };
