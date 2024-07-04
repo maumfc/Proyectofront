@@ -11,6 +11,7 @@ const Navbar = () => {
   }
   return (
     <nav className="navbar">
+      <div>
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link to="/home" className="nav-link">Inicio</Link>
@@ -33,6 +34,8 @@ const Navbar = () => {
           <></>
         )}
       </ul>
+      </div>
+      <p>Vinculo Encantado</p>
     </nav>
   );
 };

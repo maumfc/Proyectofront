@@ -2,8 +2,12 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './RegistroUsuario.css'; 
+import { ConexionApi } from '../../../hooks/conexion-api';
+import { useNavigate } from 'react-router-dom';
 
 const RegistroUsuario = () => {
+  const { registro}  = ConexionApi();
+
   const navigate = useNavigate();
   const initialValues = {
     nombre: '',
@@ -23,8 +27,9 @@ const RegistroUsuario = () => {
   });
 
   const handleSubmit = (values, { setSubmitting }) => {
-    console.log(values);
+    registro(values);
     setSubmitting(false);
+    navigate.push ("/login");
   };
 
   return (
@@ -56,7 +61,7 @@ const RegistroUsuario = () => {
             </div>
 
             <button type="submit" disabled={isSubmitting}>
-            <button className="add-product-button" onClick={() => { navigate('/productoform'); }}>
+           
               Registrarse
             </button>
           </Form>

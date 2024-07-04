@@ -5,7 +5,8 @@
       "nombre": "sueño",
       "imagen": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjRidjl0N2dxbGJxNTc1dWI0cjRxYXZvb2NtZGFiamF4ZWhkZjJkdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HWLa2UnmEsc2qpYu8f/giphy.gif",
       "descripcion": "mimir con advo",
-      "precio": 7000
+      "precio": 7000,
+      "esFavorito": true
     }
   ],
   "users": [
@@ -14,6 +15,70 @@
       "username": "sofi",
       "email": "sofi.sfc@example.com",
       "password": "sofi2015"
+    },
+    {
+      "id": "f79c",
+      "username": {
+        "nombre": "sofi",
+        "correo": "sofimfc@gmail.com",
+        "contraseña": "sofi2015"
+      }
+    },
+    {
+      "id": "8c46",
+      "username": {
+        "nombre": "sofi",
+        "correo": "sofimfc@gmail.com",
+        "contraseña": "sofi2015"
+      }
+    },
+    {
+      "id": "04bd",
+      "username": {
+        "nombre": "sofi",
+        "correo": "sofimfc@gmail.com",
+        "contraseña": "sofi2015"
+      }
+    },
+    {
+      "id": "8b4d",
+      "username": {
+        "nombre": "sofi",
+        "correo": "sofimfc@gmail.com",
+        "contraseña": "sofi2015"
+      }
+    },
+    {
+      "id": "c22f",
+      "username": {
+        "nombre": "sofi",
+        "correo": "sofimfc@gmail.com",
+        "contraseña": "sofi2015"
+      }
+    },
+    {
+      "id": "47a5",
+      "username": {
+        "nombre": "minina",
+        "correo": "sofimfc@gmail.com",
+        "contraseña": "minina2014"
+      }
+    },
+    {
+      "id": "6d89",
+      "username": {
+        "nombre": "minina",
+        "correo": "sofimfc@gmail.com",
+        "contraseña": "minina2014"
+      }
+    },
+    {
+      "id": "f2c8",
+      "username": {
+        "nombre": "minina",
+        "correo": "sofimfc@gmail.com",
+        "contraseña": "minina2014"
+      }
     }
   ]
 }

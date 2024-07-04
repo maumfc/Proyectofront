@@ -74,7 +74,7 @@ export const ConexionApi = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(product)
+                body: JSON.stringify({ ...product, esFavorito: false })
             });
 
             if (!response.ok) {
@@ -114,6 +114,7 @@ export const ConexionApi = () => {
 
 
     return {
+        registro,
         getProductos,
         loginApi,
         addProduct,

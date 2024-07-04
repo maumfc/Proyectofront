@@ -37,7 +37,9 @@ const App = () => {
             <Route path="/edit-product/:id" element={<ProtectedRoute element={<ProductoForm />} />} />
             <Route path="/registrousuario" element={<ProtectedRoute element={<RegistroUsuario/>} />} />
           </Routes>
-       
+          <footer className="footer">
+        <p>&copy; {new Date().getFullYear()} Vínculo Encantado. Todos los derechos reservados.</p>
+      </footer> 
      </AuthProvider>
       </Router>
   );
