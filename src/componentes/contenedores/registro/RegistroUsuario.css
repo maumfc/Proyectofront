@@ -1,0 +1,68 @@
+
+
+.registro-formulario {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .registro-formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .campo-formulario {
+    margin-bottom: 10px;
+  }
+  
+  .campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .campo-formulario input[type="text"],
+  .campo-formulario input[type="email"],
+  .campo-formulario input[type="password"] {
+    width: calc(100% - 12px);
+    padding: 6px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .campo-formulario input[type="text"]:focus,
+  .campo-formulario input[type="email"]:focus,
+  .campo-formulario input[type="password"]:focus {
+    outline: none;
+    border-color: #5b9dd9;
+    box-shadow: 0 0 5px rgba(91, 157, 217, 0.5);
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00a305;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  

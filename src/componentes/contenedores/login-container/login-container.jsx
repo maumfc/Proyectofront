@@ -33,6 +33,7 @@ const LoginContainer = () => {
             />
           </label>
           <button type="button" className="login-form-button" onClick={() => { login(username, password) }}>Iniciar Sesión</button>
+          <button type="button" className="" onClick={() => { login(username, password) }}>Registrarse</button>
         </form>
       </div>
     </div>

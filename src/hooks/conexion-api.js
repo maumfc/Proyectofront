@@ -1,5 +1,3 @@
-// CONEXION CON API JSON-SERVER
-
 export const ConexionApi = () => {
     async function getProductos() {
         try {

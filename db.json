@@ -1,25 +1,11 @@
 {
   "products": [
     {
-      "id": "9b52",
-      "nombre": "advoo",
-      "imagen": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTl1OXhkbWk4ZTB2czluMG1md2p2czR0aDN6dWZqemVvZmY1NWY5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uWPnq3Gtjmf5iN9cWh/giphy.gif",
-      "descripcion": "curioso.",
-      "precio": 15000
-    },
-    {
-      "id": "8113",
-      "nombre": "advo",
-      "imagen": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTl1OXhkbWk4ZTB2czluMG1md2p2czR0aDN6dWZqemVvZmY1NWY5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uWPnq3Gtjmf5iN9cWh/giphy.gif",
-      "descripcion": "me distrae\n",
-      "precio": 15000
-    },
-    {
-      "id": "7731",
-      "nombre": "advo",
-      "imagen": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTl1OXhkbWk4ZTB2czluMG1md2p2czR0aDN6dWZqemVvZmY1NWY5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uWPnq3Gtjmf5iN9cWh/giphy.gif",
-      "descripcion": "hola",
-      "precio": 15000
+      "id": "0b0d",
+      "nombre": "sueño",
+      "imagen": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjRidjl0N2dxbGJxNTc1dWI0cjRxYXZvb2NtZGFiamF4ZWhkZjJkdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HWLa2UnmEsc2qpYu8f/giphy.gif",
+      "descripcion": "mimir con advo",
+      "precio": 7000
     }
   ],
   "users": [
