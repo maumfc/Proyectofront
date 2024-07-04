@@ -9,6 +9,7 @@ import Navbar from './componentes/commons/navbar';
 import { AuthProvider, AuthContext } from './hooks/auth-context';
 import ProductoForm from './componentes/contenedores/agregar-productos/guardar-productos';
 import './App.css'
+import RegistroUsuario from './componentes/contenedores/registro/RegistroUsuario';
  
 const ProtectedRoute = ({ element }) => {
   const  isLoggedIn  = useContext(AuthContext);
@@ -33,8 +34,12 @@ const App = () => {
             <Route path="/home" element={<ProtectedRoute element={<Home />} />} />
             <Route path="/productos" element={<ProtectedRoute element={<Productos />} />} />
             <Route path="/productoform" element={<ProtectedRoute element={<ProductoForm />} />} />
+            <Route path="/edit-product/:id" element={<ProtectedRoute element={<ProductoForm />} />} />
+            <Route path="/registrousuario" element={<ProtectedRoute element={<RegistroUsuario/>} />} />
           </Routes>
-       
+          <footer className="footer">
+        <p>&copy; {new Date().getFullYear()} Vínculo Encantado. Todos los derechos reservados.</p>
+      </footer> 
      </AuthProvider>
       </Router>
   );

@@ -1,5 +1,5 @@
 .contact-info {
-    background-color: #f9f9f9;
+    
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -7,7 +7,7 @@
   
   .contact-info h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #f6dada;
   }
   
   .info-item {
@@ -16,12 +16,12 @@
   
   .info-item h3 {
     margin-bottom: 10px;
-    color: #333;
+    color: #fcefef;
   }
   
   .info-item p {
     margin: 0;
-    color: #666;
+    color: #bcb8b8;
   }
   
   .map-container {
@@ -35,7 +35,7 @@
   
   .contact-form h2 {
     margin-bottom: 10px;
-    color: #333;
+    color: #dcc5c5;
   }
   
   .contact-form form {
@@ -79,7 +79,7 @@
   
   .social-links h3 {
     margin-bottom: 10px;
-    color: #333;
+    color: #edd7d7;
   }
   
   .social-links a {

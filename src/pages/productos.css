@@ -10,5 +10,6 @@
     align-items: end;
     display: flex;
     justify-content: flex-end;
-    padding-right: 50px;
+    padding-right: 150px;
+    padding-left: 150px;
 }

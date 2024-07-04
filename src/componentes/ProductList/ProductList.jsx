@@ -7,19 +7,38 @@ const ProductList = () => {
   const { getProductos } = ConexionApi();
   const [productsData, setProductsData] = useState([]);
   const [error, setError] = useState(null);
+  const [searchInput, setSearchInput] = useState(null);
+
+  const handleSearchChange = (event) => {
+    setSearchInput(event.target.value);
+  };
+
+  const filtro = async (inputBuscar) => {
+    if (!inputBuscar.trim()) {
+      const allProducts = await getProductos();
+      setProductsData(allProducts);
+      return;
+    }
+    const filtroProductos = productsData.filter((product) => product.nombre.toLowerCase().includes(inputBuscar.toLowerCase()));
+    setProductsData(filtroProductos);
+  };
 
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const productos = await getProductos();
-        setProductsData(productos);
+        if (searchInput) {
+          await filtro(searchInput);
+        } else {
+          const productos = await getProductos();
+          setProductsData(productos);
+        }
       } catch (error) {
         setError(error.message);
       }
     };
 
     fetchProductos();
-  }, [getProductos]);
+  }, [searchInput]);
 
   const handleDelete = async (id) => {
     try {
@@ -35,6 +54,16 @@ const ProductList = () => {
   };
 
   return (
+    <>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Buscar productos..."
+          value={searchInput}
+          onChange={handleSearchChange}
+        />
+      </div>
+
     <div className="product-list">
       {error ? (
         <p>Error al cargar productos: {error}</p>
@@ -44,9 +73,10 @@ const ProductList = () => {
             key={product.id}
             product={product}
             onDelete={handleDelete} />
-        )) : <div clasName="empty-container"><h1 className=''>No hay productos</h1></div>
+          )) : <div className="empty-container"><h1 className=''> {searchInput ? `No se encontro el producto: "${searchInput}"` : "No hay productos"}</h1></div>
       )}
     </div>
+    </>
   );
 };
 

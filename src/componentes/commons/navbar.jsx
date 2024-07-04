@@ -11,15 +11,16 @@ const Navbar = () => {
   }
   return (
     <nav className="navbar">
+      <div>
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link to="/home" className="nav-link">Home</Link>
+          <Link to="/home" className="nav-link">Inicio</Link>
         </li>
         <li className="nav-item">
-          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/about" className="nav-link">Descripcion</Link>
         </li>
         <li className="nav-item">
-          <Link to="/contact" className="nav-link">Contact</Link>
+          <Link to="/contact" className="nav-link">Contactos</Link>
         </li>
         
         <li className="nav-item">
@@ -33,6 +34,8 @@ const Navbar = () => {
           <></>
         )}
       </ul>
+      </div>
+      <p>Vinculo Encantado</p>
     </nav>
   );
 };

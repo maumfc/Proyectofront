@@ -1,14 +1,21 @@
 import { useNavigate } from 'react-router-dom';
 import { ConexionApi } from '../../../hooks/conexion-api';
 
-export function useGuardarProductos() {
+export function useGuardarProductos(id) {
     const navigate = useNavigate();
-    const { addProduct } = ConexionApi();
+    const { addProduct, actualizarProduct } = ConexionApi();
 
-    function handleSubmit(producto) {
-        console.log(producto)
-        addProduct(producto)
-        navigate('/productos')
+    async function handleSubmit(producto) {
+        try {
+            if (id) {
+                await actualizarProduct({ id, ...producto });
+            } else {
+                await addProduct(producto);
+            }
+            navigate('/productos');
+        } catch (error) {
+            console.error("Error al guardar el producto:", error);
+        }
     }
 
     return {
