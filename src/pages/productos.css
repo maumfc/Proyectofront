@@ -12,4 +12,5 @@
     justify-content: flex-end;
     padding-right: 150px;
     padding-left: 150px;
+    justify-content: space-between;
 }
