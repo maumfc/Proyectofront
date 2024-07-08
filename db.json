@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "id": "0b0d",
-      "nombre": "sueño",
-      "imagen": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjRidjl0N2dxbGJxNTc1dWI0cjRxYXZvb2NtZGFiamF4ZWhkZjJkdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HWLa2UnmEsc2qpYu8f/giphy.gif",
-      "descripcion": "mimir con advo",
-      "precio": 7000,
+      "id": "eb48",
+      "nombre": "wenas ewe",
+      "imagen": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHc5M2E3cjBwOGZidXE2bG14b2F5NjBsbWs3cTI0b2Y0dTAzNWJhYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13MGgJHu1nYAkE/giphy.gif",
+      "descripcion": "lindo dia",
+      "precio": 12000,
       "esFavorito": true
     }
   ],
@@ -78,6 +78,22 @@
         "nombre": "minina",
         "correo": "sofimfc@gmail.com",
         "contraseña": "minina2014"
+      }
+    },
+    {
+      "id": "4b2e",
+      "username": {
+        "nombre": "felicidad",
+        "correo": "sofimfc@gmail.com",
+        "contraseña": "sofi2015"
+      }
+    },
+    {
+      "id": "3675",
+      "username": {
+        "nombre": "felicidad",
+        "correo": "sofimfc@gmail.com",
+        "contraseña": "sofi2015"
       }
     }
   ]
