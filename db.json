@@ -1,5 +1,14 @@
 {
-  "products": [],
+  "products": [
+    {
+      "id": "9198",
+      "nombre": "Hilos Entrelazados",
+      "imagen": "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/f6e41ee5b68859ea441f4b749adbd424.jpg?imageView2/2/w/800/q/70/format/webp",
+      "descripcion": "Explora la intrincada belleza del amor con nuestra pulsera \"Hilos Entrelazados\", inspirada en la fascinante simetría y fuerza de las arañas. Diseñada para parejas que encuentran en la naturaleza una fuente de conexión y misterio, esta pulsera captura la esencia de la unión eterna.",
+      "precio": 5000,
+      "esFavorito": true
+    }
+  ],
   "users": [
     {
       "id": "1",
