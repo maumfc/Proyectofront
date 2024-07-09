@@ -2,17 +2,17 @@ body {
   background-image: url('https://images.unsplash.com/photo-1635928054139-a9ce05305194?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-repeat: no-repeat;
   background-size: cover;
-  /* Ajuste para que la imagen cubra todo el fondo */
+  /* Ajuste para que la imagen cubra todo el fondo /
   background-position: center center;
-  /* Centrar la imagen tanto horizontal como verticalmente */
+  / Centrar la imagen tanto horizontal como verticalmente /
   height: 100%;
-  /* Asegurar que el fondo ocupe toda la altura de la ventana */
+  / Asegurar que el fondo ocupe toda la altura de la ventana /
   margin: 0;
-  /* Eliminar el margen predeterminado del cuerpo */
+  / Eliminar el margen predeterminado del cuerpo /
   padding: 0;
-  /* Eliminar el padding predeterminado del cuerpo */
+  / Eliminar el padding predeterminado del cuerpo /
   font-family: Arial, sans-serif;
-  /* Tipo de fuente predeterminado para el cuerpo */
+  / Tipo de fuente predeterminado para el cuerpo */
 }
 .btn-registrar {
   margin-top: 10px;
@@ -28,7 +28,7 @@ body {
     align-items: center;
     height: 100vh;
   }
-  
+
   .login-form {
     width: 300px;
     padding: 20px;
@@ -36,12 +36,12 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(230, 221, 221, 0.1);
   }
-  
+
   .login-form h2 {
     text-align: center;
     margin-bottom: 20px;
   }
-  
+
   .login-form input {
     width: 100%;
     padding: 10px;
@@ -50,7 +50,7 @@ body {
     border-radius: 4px;
     font-size: 16px;
   }
-  
+
   .login-form button {
     width: 100%;
     padding: 10px;
@@ -62,8 +62,7 @@ body {
     font-size: 16px;
     transition: background-color 0.3s ease;
   }
-  
+
   .login-form button:hover {
     background-color: #45a049;
   }
-  

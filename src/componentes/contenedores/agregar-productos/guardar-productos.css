@@ -1,5 +1,3 @@
-
-
 .form-control {
     margin-bottom: 10px;
     text-align: center;
@@ -22,7 +20,7 @@ input[type="number"] {
 }
 
 button {
-    background-color: #058d07;
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;

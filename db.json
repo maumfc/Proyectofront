@@ -1,14 +1,5 @@
 {
-  "products": [
-    {
-      "id": "eb48",
-      "nombre": "wenas ewe",
-      "imagen": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHc5M2E3cjBwOGZidXE2bG14b2F5NjBsbWs3cTI0b2Y0dTAzNWJhYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13MGgJHu1nYAkE/giphy.gif",
-      "descripcion": "lindo dia",
-      "precio": 12000,
-      "esFavorito": true
-    }
-  ],
+  "products": [],
   "users": [
     {
       "id": "1",
