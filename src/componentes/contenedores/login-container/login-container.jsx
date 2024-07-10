@@ -1,45 +1,45 @@
-import React, { useContext, useState } from 'react';
-import './login.css'; // Asegúrate de importar el archivo CSS correctamente
-import { AuthContext } from '../../../hooks/auth-context';
-import { useNavigate } from 'react-router-dom'; 
-const LoginContainer = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const { login } = useContext(AuthContext)
-  const navigate = useNavigate();
+import React, { useContext, useState } from 'react'; // Importación de React, useContext y useState desde 'react'
+import './login.css'; // Importación del archivo de estilos 'login.css'. Asegúrate de que la ruta al archivo CSS sea correcta.
+import { AuthContext } from '../../../hooks/auth-context'; // Importación del contexto de autenticación desde '../../../hooks/auth-context'
+import { useNavigate } from 'react-router-dom'; // Importación de useNavigate desde 'react-router-dom'
 
-  
+const LoginContainer = () => { // Definición del componente funcional LoginContainer
+  const [username, setUsername] = useState(''); // Estado local para almacenar el nombre de usuario
+  const [password, setPassword] = useState(''); // Estado local para almacenar la contraseña
+  const { login } = useContext(AuthContext); // Extracción de la función login desde el contexto de autenticación
+  const navigate = useNavigate(); // Obtención de la función navigate desde 'react-router-dom'
+
   return (
-    <div className="login-form-container">
-      <div className="login-form">
-        <h2>Inicio de Sesión</h2>
-        <form >
+    <div className="login-form-container"> {/* Contenedor principal del formulario de inicio de sesión */}
+      <div className="login-form"> {/* Formulario de inicio de sesión */}
+        <h2>Inicio de Sesión</h2> {/* Título del formulario */}
+        <form> {/* Formulario */}
           <label>
-            Usuario:
+            Usuario: {/* Etiqueta para el campo de usuario */}
             <input
               type="text"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="login-form-input"
-              required
+              onChange={(e) => setUsername(e.target.value)} // Manejador de cambio para actualizar el estado 'username'
+              className="login-form-input" // Clase CSS para estilización del input
+              required // Campo requerido
             />
           </label>
           <label>
-            Contraseña:
+            Contraseña: {/* Etiqueta para el campo de contraseña */}
             <input
               type="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="login-form-input"
-              required
+              onChange={(e) => setPassword(e.target.value)} // Manejador de cambio para actualizar el estado 'password'
+              className="login-form-input" // Clase CSS para estilización del input
+              required // Campo requerido
             />
           </label>
-          <button type="button" className="login-form-button" onClick={() => { login(username, password) }}>Iniciar Sesión</button>
-          <button type="button" className="btn-registrar" onClick={() => { navigate('/registrousuario'); }}>Registro</button>
+          <button type="button" className="login-form-button" onClick={() => { login(username, password) }}>Iniciar Sesión</button> {/* Botón para iniciar sesión que llama a la función 'login' con los datos de usuario y contraseña */}
+          <button type="button" className="btn-registrar" onClick={() => { navigate('/registrousuario'); }}>Registro</button> {/* Botón para redirigir al usuario a la página de registro */}
         </form>
       </div>
     </div>
   );
 };
 
-export default LoginContainer;
+export default LoginContainer; // Exportación del componente LoginContainer para su uso en otras partes de la aplicación

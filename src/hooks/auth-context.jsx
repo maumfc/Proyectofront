@@ -1,43 +1,46 @@
-import React, { createContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ConexionApi } from './conexion-api';
+import React, { createContext, useEffect, useState } from 'react'; // Importación de React, createContext, useEffect y useState desde 'react'
+import { useNavigate } from 'react-router-dom'; // Importación de useNavigate desde 'react-router-dom'
+import { ConexionApi } from './conexion-api'; // Importación de ConexionApi desde './conexion-api'
 
-export const AuthContext = createContext();
+export const AuthContext = createContext(); // Creación del contexto de autenticación
 
-export const AuthProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(() => {
-    const storedStatus = localStorage.getItem('isLoggedIn');
-    return storedStatus === 'true';
+export const AuthProvider = ({ children }) => { // Definición del componente AuthProvider que recibe children como prop
+  const [isLoggedIn, setIsLoggedIn] = useState(() => { // Estado para indicar si el usuario está autenticado
+    const storedStatus = localStorage.getItem('isLoggedIn'); // Obtención del estado de inicio de sesión almacenado en localStorage
+    return storedStatus === 'true'; // Devuelve true si el estado almacenado es 'true', de lo contrario false
   });
-  const navigate = useNavigate();
-  const { loginApi } = ConexionApi();
-  useEffect(() => {
-    localStorage.setItem('isLoggedIn', isLoggedIn);
-  }, [isLoggedIn]);
-  const login = async (username, password) => {
-    try {
-      const userData = await loginApi(username, password);
-      console.log(userData);
 
-      if (userData) {
-        setIsLoggedIn(true);
-        navigate('/home');
+  const navigate = useNavigate(); // Obtención de la función navigate desde 'react-router-dom'
+  const { loginApi } = ConexionApi(); // Extracción de la función loginApi desde ConexionApi
+
+  useEffect(() => { // Efecto secundario para almacenar el estado de isLoggedIn en localStorage
+    localStorage.setItem('isLoggedIn', isLoggedIn); // Almacena el estado actual de isLoggedIn en localStorage
+  }, [isLoggedIn]); // Se ejecuta cuando el estado isLoggedIn cambia
+
+  const login = async (username, password) => { // Función para iniciar sesión
+    try {
+      const userData = await loginApi(username, password); // Llama a loginApi para autenticar al usuario con username y password
+      console.log(userData); // Imprime los datos del usuario (puedes personalizar esta parte según tus necesidades)
+
+      if (userData) { // Si userData existe (es decir, si la autenticación fue exitosa)
+        setIsLoggedIn(true); // Establece isLoggedIn en true
+        navigate('/home'); // Redirige al usuario a la página de inicio ('/home')
       } else {
-        console.log("Credenciales incorrectas");
+        console.log("Credenciales incorrectas"); // Mensaje de error si las credenciales son incorrectas
       }
     } catch (error) {
-      console.error("Error en el inicio de sesión:", error);
+      console.error("Error en el inicio de sesión:", error); // Manejo de errores si ocurre algún problema en el inicio de sesión
     }
   };
 
-  const logout = () => {
-    setIsLoggedIn(false);
-    navigate('/login');
+  const logout = () => { // Función para cerrar sesión
+    setIsLoggedIn(false); // Establece isLoggedIn en false
+    navigate('/login'); // Redirige al usuario a la página de inicio de sesión ('/login')
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, login, logout }}>
-      {children}
+    <AuthContext.Provider value={{ isLoggedIn, login, logout }}> {/* Proveedor de contexto de autenticación */}
+      {children} {/* Renderiza los componentes hijos envueltos por el contexto de autenticación */}
     </AuthContext.Provider>
   );
 };
