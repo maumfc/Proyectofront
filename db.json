@@ -7,6 +7,14 @@
       "descripcion": "mimir con advo",
       "precio": 7000,
       "esFavorito": true
+    },
+    {
+      "id": "e45c",
+      "nombre": "advo",
+      "imagen": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjRidjl0N2dxbGJxNTc1dWI0cjRxYXZvb2NtZGFiamF4ZWhkZjJkdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HWLa2UnmEsc2qpYu8f/giphy.gif",
+      "descripcion": "quitame el castigo",
+      "precio": 300000,
+      "esFavorito": true
     }
   ],
   "users": [
