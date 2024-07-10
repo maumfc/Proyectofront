@@ -12,7 +12,7 @@ import './App.css'
 import RegistroUsuario from './componentes/contenedores/registro/RegistroUsuario';
  
 const ProtectedRoute = ({ element }) => {
-  const  isLoggedIn  = useContext(AuthContext);
+  const { isLoggedIn } = useContext(AuthContext);
   return isLoggedIn ? element : <Navigate to="/login" />;
 };
 
@@ -20,28 +20,27 @@ const App = () => {
 
 
   return (
-      <Router>
-     <AuthProvider>
-       
+    <Router>
+      <AuthProvider>
         <Navbar />
-
+        <div className="main-content">
           <Routes>
             <Route path="/login" element={<Login />} />
-           
-            <Route path="/" element={<ProtectedRoute element={<Login />} />} />
+            <Route path="/" element={<ProtectedRoute element={<Home />} />} />
             <Route path="/about" element={<ProtectedRoute element={<About />} />} />
             <Route path="/contact" element={<ProtectedRoute element={<Contacto />} />} />
             <Route path="/home" element={<ProtectedRoute element={<Home />} />} />
             <Route path="/productos" element={<ProtectedRoute element={<Productos />} />} />
             <Route path="/productoform" element={<ProtectedRoute element={<ProductoForm />} />} />
             <Route path="/edit-product/:id" element={<ProtectedRoute element={<ProductoForm />} />} />
-            <Route path="/registrousuario" element={<ProtectedRoute element={<RegistroUsuario/>} />} />
+            <Route path="/registrousuario" element={<RegistroUsuario />} />
           </Routes>
-          <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Vínculo Encantado. Todos los derechos reservados.</p>
-      </footer> 
-     </AuthProvider>
-      </Router>
+        </div>
+        <footer className="footer">
+          <p>&copy; {new Date().getFullYear()} Vínculo Encantado. Todos los derechos reservados.</p>
+        </footer>
+      </AuthProvider>
+    </Router>
   );
 };
 

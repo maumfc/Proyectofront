@@ -1,13 +1,19 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ConexionApi } from './conexion-api';
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    const storedStatus = localStorage.getItem('isLoggedIn');
+    return storedStatus === 'true';
+  });
   const navigate = useNavigate();
   const { loginApi } = ConexionApi();
+  useEffect(() => {
+    localStorage.setItem('isLoggedIn', isLoggedIn);
+  }, [isLoggedIn]);
   const login = async (username, password) => {
     try {
       const userData = await loginApi(username, password);

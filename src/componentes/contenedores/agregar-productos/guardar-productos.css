@@ -43,4 +43,5 @@ button:hover {
     margin-right: 150px;
     margin-top: 50px;
     margin-left: 150px;
+    justify-self: center;
 }

@@ -11,7 +11,11 @@ const ContactInfo = () => {
       </div>
       <div className="info-item">
         <h3>Phone:</h3>
-        <p>+506 64453107</p>
+        <p>
+          <a href="https://wa.me/50664453107" target="_blank" rel="noopener noreferrer">
+            +506 64453107
+          </a>
+        </p>
       </div>
       <div className="info-item">
         <h3>Email:</h3>

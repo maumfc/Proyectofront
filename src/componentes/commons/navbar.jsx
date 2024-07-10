@@ -11,7 +11,6 @@ const Navbar = () => {
   }
   return (
     <nav className="navbar">
-      <div>
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link to="/home" className="nav-link">Inicio</Link>
@@ -31,10 +30,9 @@ const Navbar = () => {
             <Link to="/login" className="nav-link">Logout</Link>
           </li>
         ) : (
-          <></>
+          null
         )}
       </ul>
-      </div>
       <p>Vinculo Encantado</p>
     </nav>
   );
