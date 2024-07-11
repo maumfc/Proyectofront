@@ -33,6 +33,7 @@ const App = () => { // Definición del componente funcional App
             <Route path="/productoform" element={<ProtectedRoute element={<ProductoForm />} />} /> {/* Ruta protegida para la página de formulario de producto, renderiza el componente ProductoForm */}
             <Route path="/edit-product/:id" element={<ProtectedRoute element={<ProductoForm />} />} /> {/* Ruta protegida para la edición de producto, renderiza el componente ProductoForm */}
             <Route path="/registrousuario" element={<RegistroUsuario />} /> {/* Ruta para la página de registro de usuario, renderiza el componente RegistroUsuario */}
+            <Route path="/*" element={<ProtectedRoute element={<Login />} />} />
           </Routes>
         </div>
         <footer className="footer"> {/* Pie de página */}

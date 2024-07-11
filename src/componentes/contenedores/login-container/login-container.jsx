@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'; // Importación de useNavigate d
 const LoginContainer = () => { // Definición del componente funcional LoginContainer
   const [username, setUsername] = useState(''); // Estado local para almacenar el nombre de usuario
   const [password, setPassword] = useState(''); // Estado local para almacenar la contraseña
-  const { login } = useContext(AuthContext); // Extracción de la función login desde el contexto de autenticación
+  const { login, error } = useContext(AuthContext); // Extracción de la función login desde el contexto de autenticación
   const navigate = useNavigate(); // Obtención de la función navigate desde 'react-router-dom'
 
   return (
@@ -34,6 +34,7 @@ const LoginContainer = () => { // Definición del componente funcional LoginCont
               required // Campo requerido
             />
           </label>
+          {error && <p className="error-message">{error}</p>} {/* Muestra el mensaje de error si existe */}
           <button type="button" className="login-form-button" onClick={() => { login(username, password) }}>Iniciar Sesión</button> {/* Botón para iniciar sesión que llama a la función 'login' con los datos de usuario y contraseña */}
           <button type="button" className="btn-registrar" onClick={() => { navigate('/registrousuario'); }}>Registro</button> {/* Botón para redirigir al usuario a la página de registro */}
         </form>

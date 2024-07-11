@@ -5,6 +5,7 @@ import { ConexionApi } from './conexion-api'; // Importación de ConexionApi des
 export const AuthContext = createContext(); // Creación del contexto de autenticación
 
 export const AuthProvider = ({ children }) => { // Definición del componente AuthProvider que recibe children como prop
+  const [error, setError] = useState(''); // Estado local para manejar el mensaje de error
   const [isLoggedIn, setIsLoggedIn] = useState(() => { // Estado para indicar si el usuario está autenticado
     const storedStatus = localStorage.getItem('isLoggedIn'); // Obtención del estado de inicio de sesión almacenado en localStorage
     return storedStatus === 'true'; // Devuelve true si el estado almacenado es 'true', de lo contrario false
@@ -24,11 +25,14 @@ export const AuthProvider = ({ children }) => { // Definición del componente Au
 
       if (userData) { // Si userData existe (es decir, si la autenticación fue exitosa)
         setIsLoggedIn(true); // Establece isLoggedIn en true
+        setError('')
         navigate('/home'); // Redirige al usuario a la página de inicio ('/home')
       } else {
+        setError('Credenciales incorrectas');
         console.log("Credenciales incorrectas"); // Mensaje de error si las credenciales son incorrectas
       }
     } catch (error) {
+      setError('Error en el inicio de sesión. Por favor, inténtelo de nuevo.');
       console.error("Error en el inicio de sesión:", error); // Manejo de errores si ocurre algún problema en el inicio de sesión
     }
   };
@@ -39,7 +43,7 @@ export const AuthProvider = ({ children }) => { // Definición del componente Au
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, login, logout }}> {/* Proveedor de contexto de autenticación */}
+    <AuthContext.Provider value={{ isLoggedIn, login, logout, error }}> {/* Proveedor de contexto de autenticación */}
       {children} {/* Renderiza los componentes hijos envueltos por el contexto de autenticación */}
     </AuthContext.Provider>
   );
