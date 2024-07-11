@@ -44,8 +44,8 @@ export const ConexionApi = () => {
         } catch (error) {
             // En caso de error, lo registramos en la consola.
             console.error("Error en la conexión con la API:", error);
-            // Lanzamos el error para que la función que llama a esta funcióń pueda manejarlo.
-            throw error;
+            // Lanzamos false para que la función que llama a esta funcióń pueda manejarlo.
+            return false
         }
     }
 
